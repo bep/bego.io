@@ -1,4 +1,4 @@
-# The source for lugo.no
+# The source for bego.io
 
 
-![Build Status](https://circleci.com/gh/bep/lugo.no.svg?style=shield&circle-token=:circle-ci-badge-token)
+![Build Status](https://circleci.com/gh/bep/bego.io.svg?style=shield&circle-token=:circle-ci-badge-token)
