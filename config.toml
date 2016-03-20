@@ -1,18 +1,16 @@
-baseurl = "http://lugo.no/"
+baseurl = "http://bego.io/"
 languageCode = "en-us"
-title = "Lugo.no"
+title = "bego.io"
 theme = "creative"
 
-googleAnalytics = "UA-52478213-9"
+googleAnalytics = "UA-52478213-10"
 
 [params.navigation]
-		brand = "<img src='/img/lugo-logo.png'>"
+		brand = "<img src='/img/bego-logo.png'>"
         
 [params.hero]
-		slogan     = "This is not Spain"
+		slogan     = "To Be or Not to Be"
 		subtitle   = """
-**Lugo** <small>(Galician pronunciation: [ˈluɣo])</small> is a city in northwestern Spain in the autonomous community of Galicia. It is the capital of the province of Lugo. **But this page is about something completely different.**
-
-What exactly? Revisit this in the near future and you will get your answer.
+That may be the question. What this site is all about will be clear ... soon.
 """
 		buttonText = "Coming Soon"

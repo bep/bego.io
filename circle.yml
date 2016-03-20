@@ -27,4 +27,4 @@ deployment:
   s3up:
     branch: master
     commands:
-      - s3deploy -source=public/ -region=eu-west-1 -bucket=lugo.no
+      - s3deploy -source=public/ -region=eu-west-1 -bucket=bego.io
