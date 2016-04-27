@@ -1,3 +1,6 @@
 [submodule "creative"]
 	path = themes/creative
 	url = https://github.com/bep/hugo-creative-theme.git
+[submodule "static/goreact"]
+	path = static/goreact
+	url = git@github.com:bep/gr.git
