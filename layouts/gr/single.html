@@ -1,0 +1,38 @@
+{{ define "main" }}
+<div class="content main">
+	<div class="row">
+		<div class="col-lg-7">
+			<h4 class="hidden-lg"><a name="source"></a>Source Code <small><a href="#demo">See Demo</a></small></h4>
+			{{ $source := (printf "static/goreact/examples/%s/main.go" .BaseFileName )  }}
+			{{  highlight (readFile $source) "go" "" }}
+		</div>
+		<div class="col-lg-5">
+			<h4 class="hidden-lg"><a name="demo"></a>Demo <small><a href="#source">See Source</a></small></h4>
+			{{ with .Params.reactContainers }}
+				{{ range . }}
+				<div id="{{ . }}"></div>
+				{{ end }}
+			{{ else }}
+				<div id="react"></div>
+			{{ end }}
+		</div>
+	<div>
+</div>
+{{end}}
+{{ define "script"}}
+<script src="//unpkg.com/react@15/dist/react.min.js"></script>
+<script src="//unpkg.com/react-dom@15/dist/react-dom.min.js"></script>
+{{ with .Params.scripts }}
+	{{ range .}}
+		{{ if hasPrefix . "/"}}
+			<script src="{{ . }}"></script>
+		{{ else }}
+			{{ $scriptURL := ( (printf "goreact/examples/%s/%s" $.BaseFileName . ) | relURL ) }}
+			<script src="{{ $scriptURL }}"></script>
+		{{ end }}
+	{{ end }}
+{{ else }}
+	{{ $scriptURL := ( (printf "goreact/examples/%s/%s.js" .BaseFileName .BaseFileName ) | relURL ) }}
+	<script src="{{ $scriptURL }}"></script>
+{{ end }}
+{{ end }}

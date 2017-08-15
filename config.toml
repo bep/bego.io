@@ -2,6 +2,8 @@ baseurl = "http://bego.io/"
 languageCode = "en-us"
 title = "bego.io"
 theme = "creative"
+pygmentsStyle = "monokai"
+pygmentsCodeFences = "true"
 
 googleAnalytics = "UA-52478213-10"
 

@@ -1,0 +1,12 @@
+{{ define "main" }}
+<div class="content main">
+	<div class="list-group text-uppercase">
+		{{ range .Pages }}
+			<a class="list-group-item" href="{{ .RelPermalink }}"><i class="fa fa-fw {{ .Params.icon | default "fa-snowflake-o" }}" aria-hidden="true"></i>&nbsp;  {{ .Title }}</a>
+		{{ end }}
+	</div>
+	<div>
+		{{ .Content }}
+	</div>
+<div>
+{{ end }}

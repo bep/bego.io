@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en" data-framework="gopherjs">
+	<head>
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootswatch/3.3.7/paper/bootstrap.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		{{ template "_internal/twitter_cards.html" . }}
+		{{ template "_internal/opengraph.html" . }}
+		{{ template "_internal/schema.html" . }}
+		<style>
+			.highlight pre { background: inherit; }
+			.navbar-nav { padding-left: 10px; padding-right: 10px; }
+		</style>
+		<title>Go React Examples</title>
+	</head>
+	<body>
+		<div class="navbar navbar-default">
+			<div class="container">
+				<div class="navbar-header">
+					<a href="../" class="navbar-brand">Go React Examples</a>
+				</div>
+				<div class="navbar-header pull-left">
+					<ul class="nav navbar-nav">
+						{{ range .CurrentSection.Pages }}
+						<li{{ if (eq . $.Page) }} class="active"{{ end }}><a href = "{{ .RelPermalink }}">{{ .Title }}</a></li>
+						{{ end }}
+					</ul>
+					
+				</div>
+				<div class="navbar-header pull-right">
+					<ul class="nav navbar-nav">
+						<li><a href="https://github.com/bep/gr/" target="_blank">Go React on GitHub</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		
+		<div class="container">
+			{{ block "main" . }}This is the main content.{{ end }}
+			{{ block "script" . }}{{ end }}
+		</div>
+		{{ template "_internal/google_analytics.html" . }}
+	</body>
+</html>
